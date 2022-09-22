@@ -1,12 +1,18 @@
-
+import React, { useState } from 'react';
 import './App.css';
+import MovieList from './components/MovieList';
+import Nav from './components/Nav';
+import { MovieProvider } from './MovieContext';
 
 function App() {
-  return (
-    <div className="App">
-    
-    </div>
-  );
+	return (
+		<MovieProvider>
+			<div className="App">
+				<Nav />
+				<MovieList />
+			</div>
+		</MovieProvider>
+	);
 }
 
 export default App;
